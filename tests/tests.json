@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Navigate services and request an estimate",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": ["responsive navigation", "service discovery", "estimate request form", "email handoff"],
+    "description": "Verifies a visitor can navigate to services and prepare an estimate request through the contact form.",
+    "steps": ["Open the Services section from the navigation", "Scroll to the estimate request form", "Enter a name, phone number, choose Roof repair, and submit"],
+    "expected": "The service content is visible and submitting the valid form opens a mailto draft containing the entered request details."
+  },
+  {
+    "name": "Call the roofing company from contact details",
+    "viewport": "mobile",
+    "covers": ["click-to-call contact links", "mobile call action", "business contact information"],
+    "description": "Verifies phone contact is available through the site's visible call actions on mobile.",
+    "steps": ["Open the site at a mobile viewport", "Tap the fixed Call Hunter & Sons action"],
+    "expected": "The browser is directed to the telephone link for +18133204600."
+  },
+  {
+    "name": "Prevent submitting an incomplete estimate request",
+    "viewport": "desktop",
+    "covers": ["required field validation", "invalid form submission guardrail"],
+    "description": "Verifies the estimate request form requires a name and phone number before it can be submitted.",
+    "steps": ["Navigate to the estimate request form", "Leave the required name and phone fields empty", "Submit the form"],
+    "expected": "The browser blocks submission and indicates that required fields must be completed."
+  }
+]
